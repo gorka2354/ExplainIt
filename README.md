@@ -6,6 +6,12 @@
 ![Chrome Extension](https://img.shields.io/badge/Manifest_V3-Chrome-green?style=for-the-badge&logo=googlechrome)
 ![Tailwind](https://img.shields.io/badge/Tailwind-3.4-cyan?style=for-the-badge&logo=tailwindcss)
 
+## 🎥 Demo Preview
+
+<p align="center">
+  <img src="ExplainIt.gif" alt="ExplainIt Extension Demo" width="800">
+</p>
+
 **ExplainIt** is a powerful, local-first browser extension that uses top-tier AI models (OpenAI, Anthropic Claude, Google Gemini) to instantly explain any text you highlight on a web page. It uses a Bring-Your-Own-Key (BYOK) architecture, ensuring your data remains private and you never pay for unnecessary subscriptions.
 
 ## 🌟 Key Features
