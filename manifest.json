@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "ExplainIt - AI Assistant",
+  "version": "1.1.0",
+  "description": "Smart text explanation with your own AI keys (OpenAI, Claude, Gemini)",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/background/background.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content.ts"]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "ExplainIt"
+  },
+  "side_panel": {
+    "default_path": "src/sidepanel/sidepanel.html"
+  },
+  "commands": {
+    "explain-text": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E"
+      },
+      "description": "Explain selected text"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["public/content.css", "public/floating-button.html", "assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
